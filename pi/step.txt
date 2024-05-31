@@ -1,10 +1,32 @@
 ﻿sudo apt-get update
 
-sudo apt-get install mpv
-
-pip install python-mpv==0.3.0
-
-git clone https://github.com/innovativecreations/AD
+sudo apt install  python3-vlc
 
 
-run the vi
+
+
+//for videoEditor file
+
+python3 -m venv venv
+
+soucre venv/bin/activate
+
+pip install google-cloud-firebase
+	//to run the code(in the venv)
+	python videoEditor.py
+
+	//for deacting the venv 
+	deactivate
+
+
+
+//to auto start the main.py
+	sudo nano /etc/rc.local
+
+	//just before exit 0 paste - $ python <absolute file path> & ;  in this case its like this - python home/mayank/Desktop/AD/pi/main.py &
+
+	python <absolute file path> &
+
+	CTRL + O; enter; CTRL + X
+
+
