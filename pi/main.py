@@ -1,4 +1,4 @@
-
+import keyboard
 import os
 
 relativePath = "/home/mayank/Desktop/AD/pi/"
@@ -20,25 +20,46 @@ vlc_instance = vlc.Instance()
 # Create a media player
 player = vlc_instance.media_player_new()
 
-while True:
+#while True:
 # Iterate over video paths
-    for vid in files:
-        # Load the video file
-        video_path = relativePath + "vid/" + vid
-        media = vlc_instance.media_new(video_path)
-        # full screen
+#    for vid in files:
+#        # Load the video file
+#        video_path = relativePath + "vid/" + vid
+#        media = vlc_instance.media_new(video_path)
+#        # full screen
+#	
+#        player.set_fullscreen(True)
+#
+#        # Set the media to the player
+#        player.set_media(media)
+#
+#        # Play the video
+#        player.play()
+#
+#        # Wait for the video to finish
+#        while player.get_state() != vlc.State.Ended:
+#            pass
 
-        player.set_fullscreen(True)
+
+# Iterate over video paths
+for vid in files:
+        # Load the video file
+    video_path = relativePath + "vid/" + vid
+    media = vlc_instance.media_new(video_path)
+    # full screen
+	
+    player.set_fullscreen(True)
 
         # Set the media to the player
-        player.set_media(media)
+    player.set_media(media)
 
         # Play the video
-        player.play()
+    player.play()
 
         # Wait for the video to finish
-        while player.get_state() != vlc.State.Ended:
-            pass
+    while player.get_state() != vlc.State.Ended:
+        pass
+
         
 # Release the media player and instance
 player.release()
