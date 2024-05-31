@@ -21,12 +21,24 @@ pip install google-cloud-firebase
 
 
 //to auto start the main.py
-	sudo nano /etc/rc.local
-
-	//just before exit 0 paste - $ python <absolute file path> & ;  in this case its like this - python home/mayank/Desktop/AD/pi/main.py &
-
-	python <absolute file path> &
-
-	CTRL + O; enter; CTRL + X
-
+	
+	//create shell script
+	nano /home/pi/start_python_script.sh
+	//code for SH file
+	
+	#!/bin/bash
+	# Navigate to the directory containing your Python script
+	cd /path/to/your/script
+	# Run your Python script
+	sudo python3 your_script.py
+	
+	//make executable
+	chmod +x /home/pi/start_python_script.sh
+	
+	//setup sh to autorun on start up using cron
+	sudo crontab -e
+	
+	@reboot /home/pi/start_python_script.sh
+	
+	
 
