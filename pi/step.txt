@@ -1,0 +1,10 @@
+﻿sudo apt-get update
+
+sudo apt-get install mpv
+
+pip install python-mpv==0.3.0
+
+git clone https://github.com/innovativecreations/AD
+
+
+run the vi
