@@ -3,7 +3,8 @@ import os
 
 relativePath = "/home/mayank/Desktop/AD/pi/"
 
-files = os.listdir(relativePath + "vid")
+# files = os.listdir( relativePath + "vid")
+files = os.listdir("vid")
 print(files)
 #
 # while True:
@@ -44,7 +45,8 @@ player = vlc_instance.media_player_new()
 # Iterate over video paths
 for vid in files:
         # Load the video file
-    video_path = relativePath + "vid/" + vid
+    # video_path = relativePath + "vid/" + vid
+    video_path = "vid/" + vid
     media = vlc_instance.media_new(video_path)
     # full screen
 	
